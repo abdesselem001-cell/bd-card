@@ -1,0 +1,236 @@
+```html id="f9w2ka"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Birthday Card</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+    radial-gradient(circle at top,#3a0000,#080808 70%);
+    overflow:hidden;
+}
+
+/* SCROLLBAR */
+.content::-webkit-scrollbar{
+    width:8px;
+}
+
+.content::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+.content::-webkit-scrollbar-thumb{
+    background:linear-gradient(180deg, rgba(255,43,43,0.8), rgba(255,0,0,0.4));
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.content::-webkit-scrollbar-thumb:hover{
+    background:linear-gradient(180deg, rgba(255,43,43,1), rgba(255,0,0,0.7));
+    box-shadow:0 0 10px rgba(255,43,43,0.6);
+}
+
+/* CARD */
+.card{
+    width:350px;
+    height:460px;
+    background:#111;
+    border-radius:25px;
+    border:2px solid #ff1f1f;
+    position:relative;
+    overflow:hidden;
+    box-shadow:
+    0 0 25px rgba(255,0,0,0.4),
+    0 0 60px rgba(255,0,0,0.15);
+    transition:0.5s;
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.02);
+}
+
+/* GLOW */
+.card::before{
+    content:"";
+    position:absolute;
+    width:200%;
+    height:200%;
+    background:linear-gradient(
+        45deg,
+        transparent,
+        rgba(255,0,0,0.15),
+        transparent
+    );
+    animation:shine 5s linear infinite;
+}
+
+@keyframes shine{
+    0%{
+        transform:translate(-60%,-60%) rotate(0deg);
+    }
+
+    100%{
+        transform:translate(-10%,-10%) rotate(360deg);
+    }
+}
+
+/* CONTENT */
+.content{
+    position:relative;
+    z-index:2;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+    text-align:center;
+    padding: 10px;
+    overflow-y:auto;
+}
+
+/* ICON */
+.icon{
+    font-size:80px;
+    margin-bottom:20px;
+    animation:bounce 2s infinite;
+
+}
+
+.icon img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    transform:translateY(-10px);
+    }
+
+/* ICON LINK */
+.icon-link{
+    text-decoration:none;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.icon-link:hover .icon{
+    transform:scale(1.1);
+}
+
+/* TITLE */
+h1{
+    color:#ff2b2b;
+    font-size:42px;
+    margin-bottom:20px;
+    text-shadow:
+    0 0 10px rgb(255, 255, 255),
+    0 0 20px red;
+}
+
+/* TEXT */
+p{
+    color:#ddd;
+    font-size:20px;
+    line-height:1.7;
+    max-width:280px;
+}
+
+/* symS */
+.syms span{
+    position:absolute;
+    color:#ff2b2b;
+    font-size:20px;
+    animation:float 5s linear infinite;
+    opacity:1;
+}
+
+.syms span:nth-child(1){
+    left:15%;
+    animation-delay:0s;
+}
+
+.syms span:nth-child(2){
+    left:35%;
+    animation-delay:1s;
+}
+
+.syms span:nth-child(3){
+    left:55%;
+    animation-delay:2s;
+}
+
+.syms span:nth-child(4){
+    left:75%;
+    animation-delay:3s;
+}
+
+@keyframes float{
+    0%{
+        bottom:-20px;
+        opacity:0;
+        transform:translateX(0) scale(0.5);
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    100%{
+        bottom:110%;
+        opacity:0;
+        transform:translateX(-20px) scale(1.2);
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="content">
+        <a href="photos.htm" class="icon-link">
+            <div class="icon"><img src ="kou.webp"></div>
+        </a>
+
+        <h1>お誕生日おめでとう</h1>
+
+        <p>
+            <p>
+			君へ
+			<br><br>
+
+			素敵な一年になりますように。
+			笑顔と幸せが、
+			いつもあなたと共にありますように。
+			<br><br>
+
+			お誕生日おめでとう。🎂
+			</p>
+        </p>
+    </div>
+
+    <div class="syms">
+        <span>:3</span>
+        <span>:3</span>
+        <span>:3</span>
+        <span>:3</span>
+    </div>
+
+</div>
+</body>
+</html>
+```

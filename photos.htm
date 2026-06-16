@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Photo Gallery</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+    radial-gradient(circle at top,#3a0000,#080808 70%);
+    overflow:hidden;
+}
+
+.gallery-container{
+    width:90%;
+    max-width:800px;
+    background:#111;
+    border-radius:25px;
+    border:2px solid #ff1f1f;
+    padding:40px;
+    box-shadow:
+    0 0 25px rgba(255,0,0,0.4),
+    0 0 60px rgba(255,0,0,0.15);
+    text-align:center;
+    
+    max-height:80vh;
+}
+
+.gallery-container::-webkit-scrollbar{
+    width:8px;
+}
+
+.gallery-container::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+.gallery-container::-webkit-scrollbar-thumb{
+    background:linear-gradient(180deg, rgba(255,43,43,0.8), rgba(255,0,0,0.4));
+    border-radius:10px;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-bottom:30px;
+    padding:10px 20px;
+    background:linear-gradient(135deg, #ff2b2b, #ff5555);
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    transition:0.3s;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.back-btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 15px rgba(255,43,43,0.6);
+}
+
+h1{
+    color:#ff2b2b;
+    font-size:36px;
+    margin-bottom:20px;
+    text-shadow:
+    0 0 10px rgba(255,255,255,0.5),
+    0 0 20px rgb(255, 255, 255);
+}
+
+.content-text{
+    color:#ddd;
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.image-gallery{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin:30px 0;
+}
+
+.gallery-img{
+    width:150px;
+    height:150px;
+    border-radius:15px;
+    border:2px solid #ff2b2b;
+    object-fit:cover;
+    transition:0.3s;
+}
+
+.gallery-img:hover{
+    transform:scale(1.1) rotate(2deg);
+    box-shadow:0 0 15px rgba(255,43,43,0.6);
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="gallery-container">
+    <a href="index.html" class="back-btn">← Back to Card</a>
+    
+    <h1>Special Moment</h1>
+    
+    <p class="content-text">
+        some of the COOL drawings you showed me
+        <br><br>
+    </p>
+
+    <div class="image-gallery">
+        <img src="drawing.png" alt="drawing" class="gallery-img">
+        <img src="drawing3.png" alt="drawing2" class="gallery-img">
+        <img src="drawing2.png" alt="drawing3" class="gallery-img">
+    </div>
+
+    <p class="content-text">
+        Click the image on the birthday card to come back here anytime!
+    </p>
+</div>
+
+
+</body>
+</html>
